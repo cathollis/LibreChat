@@ -8,6 +8,7 @@ import {
   useAuthContext,
   useAgentsMap,
   useFileMap,
+  useCustomCSS,
 } from '~/hooks';
 import store from '~/store';
 import {
@@ -43,6 +44,7 @@ export default function Root() {
   });
 
   useSearchEnabled(isAuthenticated);
+  useCustomCSS();
 
   useEffect(() => {
     if (termsData) {

@@ -184,7 +184,7 @@ router.get('/', async function (req, res) {
 
       const interfaceConfig = baseConfig?.interfaceConfig;
       const buildInfoDisabled = interfaceConfig?.buildInfo === false;
-      if (interfaceConfig?.privacyPolicy || interfaceConfig?.termsOfService || buildInfoDisabled) {
+      if (interfaceConfig?.privacyPolicy || interfaceConfig?.termsOfService || buildInfoDisabled || interfaceConfig?.customCSS) {
         payload.interface = {};
         if (interfaceConfig.privacyPolicy) {
           payload.interface.privacyPolicy = interfaceConfig.privacyPolicy;
@@ -194,6 +194,9 @@ router.get('/', async function (req, res) {
         }
         if (buildInfoDisabled) {
           payload.interface.buildInfo = false;
+        }
+        if (interfaceConfig.customCSS) {
+          payload.interface.customCSS = interfaceConfig.customCSS;
         }
       }
 

@@ -961,6 +961,7 @@ export const interfaceSchema = z
     fileSearch: z.boolean().optional(),
     fileCitations: z.boolean().optional(),
     buildInfo: z.boolean().optional(),
+    customCSS: z.string().optional(),
     remoteAgents: z
       .object({
         use: z.boolean().optional(),

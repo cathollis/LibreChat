@@ -64,6 +64,10 @@ cache: true
 # Custom interface configuration
 interface:
   customWelcome: 'Welcome to LibreChat! Enjoy your experience.'
+  # Inject custom CSS into the page. CSS defined here will be applied globally.
+  # customCSS: |
+  #   body { background-color: #1a1a2e; }
+  #   .custom-class { color: red; }
   # Enable/disable file search as a chatarea selection (default: true)
   # Note: This setting does not disable the Agents File Search Capability.
   # To disable the Agents Capability, see the Agents Endpoint configuration instead.
